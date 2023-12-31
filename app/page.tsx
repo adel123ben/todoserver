@@ -4,7 +4,7 @@ import prisma from "./db"
 import { revalidatePath } from "next/cache";
 import { toast } from "sonner"
 import { useState } from "react";
-import { InputDemo } from "./input";
+
 
 
 
@@ -23,7 +23,7 @@ async function getData() {
 }
 
 export  default async function Home() {
-  const BigInput = InputDemo
+ 
   
   
  
@@ -80,7 +80,7 @@ export  default async function Home() {
     <div className="h-screen w-screen flex items-center justify-center">
       <div className="border rounded-lg shadow-xl bg-green-500 p-10 w-[30vw]">
         <form action={create} method="post" className="flex flex-col">
-          <BigInput   />
+        <Input  type="text" name="input" className="border p-1 " />
           <Button  className="mt-5" type="submit" variant="destructive">Ajouter</Button>
           
         </form>
